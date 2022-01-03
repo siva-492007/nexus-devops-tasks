@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages{
-        stage('cd to task5'){
-            steps{
-                sh "cd task6"
-            }
-        }
+        // stage('cd to task6'){
+        //     steps{
+        //         sh "cd task6"
+        //     }
+        // }
 
         stage('Build Wordpress AMI'){
             steps{
