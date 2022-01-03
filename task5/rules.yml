@@ -1,0 +1,13 @@
+groups:
+  - name: wordpress-server-alert-rules
+    - alert: NodeExporterDown
+      expr: up{job="node_exporter"} == 0
+      for: 1m
+      labels:
+        serverity: warning  #just for sample case
+
+    - alert: NginxExporterDown
+      expr: up{job="nginx_exporter"} == 0
+      for: 1m
+      lables:
+        severity: critical  #just for sample case

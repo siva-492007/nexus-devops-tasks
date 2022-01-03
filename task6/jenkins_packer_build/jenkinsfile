@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages{
+        stage('Build Wordpress AMI'){
+            steps{
+                sh "packer build ../packer/aws-ubuntu.pkr.hcl"
+            }
+        }
+    }
+}

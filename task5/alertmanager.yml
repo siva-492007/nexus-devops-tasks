@@ -1,0 +1,12 @@
+route:
+  receiver: siva
+
+receivers:
+- name: siva
+  email_config:
+  - to: 'pvs1135.1@gmail.com'
+    from: 'sivavignesh761@gmail.com'
+    smarthost: smtp.gmail.com:587
+    auth_username: 'sivavignesh761@gmail.com'
+    auth_identity: 'sivavignesh761@gmail.com'
+    auth_password: '***********' #16 digit pwd provided by gmail
