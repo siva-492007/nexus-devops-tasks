@@ -3,13 +3,13 @@ pipeline {
     stages{
         stage('Initialize packer'){
             steps{
-                sh "packer init /task6"
+                sh "packer init /task6/packer"
             }
         }
 
         stage('Build Wordpress AMI'){
             steps{
-                sh "packer build /task6packer/aws-ubuntu.pkr.hcl"
+                sh "packer build /task6/packer/aws-ubuntu.pkr.hcl"
             }
         }
     }
