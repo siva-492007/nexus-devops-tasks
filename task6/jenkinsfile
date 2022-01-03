@@ -1,15 +1,15 @@
 pipeline {
     agent any
     stages{
-        // stage('cd to task6'){
-        //     steps{
-        //         sh "cd task6"
-        //     }
-        // }
+        stage('Initialize packer'){
+            steps{
+                sh "packer init /task6"
+            }
+        }
 
         stage('Build Wordpress AMI'){
             steps{
-                sh "packer build packer/aws-ubuntu.pkr.hcl"
+                sh "packer build /task6packer/aws-ubuntu.pkr.hcl"
             }
         }
     }
