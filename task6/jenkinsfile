@@ -1,6 +1,10 @@
 pipeline {
     agent any
     stages{
+        stage('cd to task5'){
+            sh "cd task6"
+        }
+
         stage('Build Wordpress AMI'){
             steps{
                 sh "packer build ../packer/aws-ubuntu.pkr.hcl"
