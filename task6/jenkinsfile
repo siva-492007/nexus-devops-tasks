@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages{
-        stage('Initialize packer'){
-            steps{
-                sh "packer init ."
-            }
-        }
+        // stage('Initialize packer'){
+        //     steps{
+        //         sh "packer init ."
+        //     }
+        // }
 
         stage('Build Wordpress AMI'){
             steps{
