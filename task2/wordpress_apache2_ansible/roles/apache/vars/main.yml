@@ -1,0 +1,4 @@
+---
+
+#HTTP Settings
+http_conf: "wordpress.conf"
