@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Starting wordpress ami build'){
             steps{
-                echo "build wordpress ami using packer"
+                echo "Build wordpress ami using packer"
             }
         }
 
@@ -15,7 +15,9 @@ pipeline {
 
         stage('Build Wordpress AMI'){
             steps{
-                sh "packer build aws-ubuntu.pkr.hcl"
+                withAWS(credentials: 'aws_pvs4_cli', region: 'us-east-1'){
+                    sh "packer build aws-ubuntu.pkr.hcl"
+                }
             }
         }
     }
